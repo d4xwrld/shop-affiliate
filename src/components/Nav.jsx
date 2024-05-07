@@ -8,7 +8,7 @@ const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full py-4 bg-white/90 shadow-lg ring-1 ring-black/5">
+    <nav className="sticky top-0 left-0 w-full py-4 bg-white/90 shadow-lg ring-1 ring-black/5">
       <div className="flex justify-center items-center gap-4 ">
         <div className="flex justify-center gap-4">
           {/* Add hamburger menu on mobile view */}

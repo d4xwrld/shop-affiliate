@@ -1,43 +1,47 @@
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.css";
 import Swal from "sweetalert2";
 import Nav from "./components/Nav";
+import ProductCard from "./components/Card";
 
 function App() {
-  function Checker() {
-    Swal.fire("SweetAlert2 is working!");
-  }
-  // Let Links =[
-  //   {name:"HOME", link:"/"},
-  //   {name:"ABOUT", link:"/"},
-  // ];
-
   return (
-    <>
-      <Nav />
-      <div className="bg-indigo-600 w-full h-screen"></div>
-      <div className="md:flex bg-white py-4">
-        <div className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins] text-gray-800">
-          <span className="text-3xl text-indigo-600 mr-1 pt-2"></span>
+    <Router basename="/">
+      <div className="h-screen">
+        <Nav />
+        <div className="flex flex-col md:flex-row md:justify-center items-center gap-4 pt-16 md:pt-0">
+          <ProductCard
+            product={{
+              name: "Laptop Asus TUF Gaming DASH F15",
+              image:
+                "https://dlcdnwebimgs.asus.com/gain/3a36a12f-9a0d-488c-bef3-05431f041b96/",
+              description: "pengen ini...",
+              url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.asus.com%2Fid%2Flaptops%2Ffor-gaming%2Ftuf-gaming%2Fasus-tuf-gaming-f15-2023%2F&psig=AOvVaw1tVmaQh0k14IX8-lcOrcQq&ust=1715170983644000&source=images&cd=vfe&opi=89978449&ved=0CBQQjhxqFwoTCLCWxtzD-4UDFQAAAAAdAAAAABAE",
+            }}
+          />
+          <ProductCard
+            product={{
+              name: "Laptop Asus TUF Gaming DASH F15",
+              image:
+                "https://dlcdnwebimgs.asus.com/gain/3a36a12f-9a0d-488c-bef3-05431f041b96/",
+              description: "pengen ini...",
+              url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.asus.com%2Fid%2Flaptops%2Ffor-gaming%2Ftuf-gaming%2Fasus-tuf-gaming-f15-2023%2F&psig=AOvVaw1tVmaQh0k14IX8-lcOrcQq&ust=1715170983644000&source=images&cd=vfe&opi=89978449&ved=0CBQQjhxqFwoTCLCWxtzD-4UDFQAAAAAdAAAAABAE",
+            }}
+          />
+          <ProductCard
+            product={{
+              name: "Laptop Asus TUF Gaming DASH F15",
+              image:
+                "https://dlcdnwebimgs.asus.com/gain/3a36a12f-9a0d-488c-bef3-05431f041b96/",
+              description: "pengen ini...",
+              url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.asus.com%2Fid%2Flaptops%2Ffor-gaming%2Ftuf-gaming%2Fasus-tuf-gaming-f15-2023%2F&psig=AOvVaw1tVmaQh0k14IX8-lcOrcQq&ust=1715170983644000&source=images&cd=vfe&opi=89978449&ved=0CBQQjhxqFwoTCLCWxtzD-4UDFQAAAAAdAAAAABAE",
+            }}
+          />
         </div>
       </div>
-    </>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p onClick={() => Checker(this)}>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
+    </Router>
   );
 }
 
