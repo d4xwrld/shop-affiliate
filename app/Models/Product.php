@@ -7,19 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    use HasFactory;
-
     protected $table = 'products';
 
-    protected $fillable = [
-        'title',
-        'url_image',
-        'description',
-        'url',
-    ];
+    protected $fillable = ['title', 'url_image', 'description', 'url'];
 
-    public function scopeOnSale($query)
-    {
-        return $query->where('on_sale', true);
-    }
+    use HasFactory;
+
+    public function getImageUrlAttribute()
+   {
+       return url('path_ke_gambar/' . $this->image);
+   }
 }
