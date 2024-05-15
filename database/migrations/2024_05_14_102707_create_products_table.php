@@ -20,7 +20,8 @@ class CreateProductsTable extends Migration
                 $table->string('url_image');
                 $table->text('description');
                 $table->string('url');
-                $table->timestamps();
+                $table->timestamps('updated_at');
+                $table->timestamps('created_at');
             });
         }
     }
