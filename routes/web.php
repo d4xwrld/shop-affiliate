@@ -20,6 +20,7 @@ Route::get('/', function () {
     return Inertia::render('Home');
 });
 
+
 Route::get('/db-check', function () {
     try {
         DB::connection()->getPdo();
@@ -34,3 +35,9 @@ Route::get('/php-version', function () {
 });
 
 Route::get('/products', [ProductController::class, 'index']);
+Route::post('/products', [ProductController::class, 'store']);
+Route::put('/products/{id}', [ProductController::class, 'update']);
+Route::delete('/products/{id}', [ProductController::class, 'destroy']);
+Route::get('/dashboard', function () {
+    return Inertia::render('ProductDashboard');
+});

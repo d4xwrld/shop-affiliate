@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Nav from "../components/Nav";
-import ProductCard from "../components/Card";
+import Nav from "./components/Nav";
+import ProductCard from "./components/Card";
 import { BrowserRouter as Router } from "react-router-dom";
 
 const Home = () => {

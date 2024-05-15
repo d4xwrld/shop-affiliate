@@ -13,8 +13,4 @@ class Product extends Model
 
     use HasFactory;
 
-    public function getImageUrlAttribute()
-   {
-       return url('path_ke_gambar/' . $this->image);
-   }
 }

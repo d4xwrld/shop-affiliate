@@ -4,12 +4,14 @@ import Swal from "sweetalert2";
 
 const ProductCard = ({ product }) => {
     return (
-        <div className="max-w-sm rounded-md overflow-hidden shadow-lg bg-white border border-gray-200 p-2 my-0 md:my-3">
-            <img src={product.url_image} alt={product.img} className="w-full" />{" "}
-            {/* Pastikan properti ini sesuai */}
+        <div className="w-72 h-96 rounded-md overflow-hidden shadow-lg bg-white border border-gray-200 p-2 my-0 md:my-3">
+            <img
+                src={product.url_image}
+                alt={product.img}
+                className="w-full h-48 object-contain"
+            />
             <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-1">{product.title}</div>{" "}
-                {/* Pastikan properti ini sesuai */}
+                <div className="font-bold text-xl mb-1">{product.title}</div>
                 <p className="text-gray-700 text-base">{product.description}</p>
             </div>
             <div className="px-6 py-4">

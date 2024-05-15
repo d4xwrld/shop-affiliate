@@ -12,6 +12,8 @@
         "vite": "^5.0.0"
     },
     "dependencies": {
+        "@inertiajs/inertia": "^0.11.1",
+        "@inertiajs/inertia-react": "^0.8.1",
         "@inertiajs/react": "^1.0.16",
         "akar-icons": "^1.9.31",
         "prop-types": "^15.8.1",
